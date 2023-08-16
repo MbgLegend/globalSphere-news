@@ -1,26 +1,25 @@
 import { currentSearch } from '../script.js'
 
-let API_KEY = "cc3eb8ce841b41e3bd90718e90e211f5";
+let API_KEY = "534eca936d87263c2e70c5e3754c9f6f"
 
-// fallback if one API key does gets rate limited
-if (API_KEY === "cc3eb8ce841b41e3bd90718e90e211f5" && "83281ac5ff874957aa8b80cb8ec979f1") {
-    API_KEY = "83281ac5ff874957aa8b80cb8ec979f1";
+const itemsPerPage = 25;
+let currentPage = 1;
+
+export function modifyCurrentPage(value) {
+    currentPage = value
+    getNews(currentSearch)
 }
-const itemsPerPage = 25
-export let currentPage = 1
-
-export function modifyCurrenPage( value ) { currentPage = value }
 
 function sanitizeText(text) {
     if (text) {
-        return text.replace(/<\/?h[1-6]>|<\/?table>|<\/?div>/g, '');
+        return text.replace(/<\/?h[1-6]>|<\/?table>|<\/?div>/g, '')
     }
-    return '';
+    return ''
 }
 
 export async function getNews(search) {
     try {
-        const response = await fetch(`https://newsapi.org/v2/everything?q=${search}&from=2023-08-11&to=2023-08-11&sortBy=popularity&apiKey=${API_KEY}`)
+        const response = await fetch(`https://gnews.io/api/v4/search?q=${search}&apikey=${API_KEY}`)
         const data = await response.json()
         let innerHTML = ''
         if (data.articles.length <= 0) {
@@ -35,16 +34,16 @@ export async function getNews(search) {
         const startIndex = (currentPage - 1) * itemsPerPage
         const endIndex = Math.min(startIndex + itemsPerPage, totalResults)
 
-        for (let i = startIndex; i < endIndex && data.articles.length; i++) {
+        for (let i = startIndex; i < endIndex && i < data.articles.length; i++)  {
             const news = data.articles[i]
 
-            if (news.urlToImage || news.urlToImage !== null && news.url && news.title && news.author && news.publishedAt && news.description) {
+            if (news.image || news.image !== null && news.source.url && news.title && news.source.name && news.publishedAt && news.description) {
                 innerHTML += `
                     <div class="container">
-                        <img src="${news.urlToImage}">
+                        <img src="${news.image}">
                         <div>
                             <h1>
-                                <a href="${news.url}">${sanitizeText(news.title)}</a>
+                                <a href="${news.source.url}">${sanitizeText(news.title)}</a>
                             </h1>
                             <span><p>${sanitizeText(news.author)}</p> | <p>${news.publishedAt}</p></span>
                             <p>${sanitizeText(news.description)}</p>
