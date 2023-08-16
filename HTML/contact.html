@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global NewsSphere - contact</title>
+    <script src="https://kit.fontawesome.com/f921ec9255.js" crossorigin="anonymous"></script>
+    <script defer type="module" src="../script.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Head -->
+    <div class="head hide-for-animation">
+        <div>
+            <ul class="content-holder">
+                <li>
+                    <a class="btn active" href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="icon-holder">
+                <li>
+                    <i class="fa-brands fa-facebook"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-twitter"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-telegram"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-youtube"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+           <p>🌍 Global NewsSphere</p>
+        </div>
+        <!-- Icons -->
+        <ul class="icon-holder">
+            <li class="dropdown">
+                <i class="fa-solid fa-gear" id="settings"></i>
+                <div class="dropdown-content"> 
+                    <h1>color scheme</h1>
+                    <div class="toggle-bar">
+                        <input type="checkbox" class="toggle-checkbox" id="toggle" />
+                        <label class="toggle-label active" for="toggle"></label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- contact form -->
+    <section class="contact-banner hide-for-animation">
+        <div class="bg-image"></div>
+        <fieldset>
+            <h1>Contact Us</h1>
+            <p>For Enquiries, fill out the form below</p>
+            <form id="form">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Ex. John">
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Ex. john123@email.com">
+                </div>
+                
+                <div>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="Ex. support">
+                </div>
+
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" cols="30" rows="10" placeholder="Ex. I am facing an issue..."></textarea>
+                </div>
+
+                <button type="submit" id="contactSubmit">Send Message</button>
+
+                <p id="errorMessage"></p>
+            </form>
+        </fieldset>
+    </section>
+
+    <!-- News letter -->
+    <div class="newsletter">
+        <div class="grid">
+            <h2>Sign up for our Press Releases</h2>
+            <div>
+                <input type="email" id="newsletterEmail" placeholder="Enter your email address">
+                <button type="submit" id="newsletterSubmit">Subscribe</button>
+            </div>
+        </div>
+        <p id="newsletterErrorMessage">Enter a valid email!</p>
+    </div>
+
+     <!-- Footer -->
+     <footer class="hide-for-animation">
+        <div class="text-container">
+            <div class="logo">
+                <p>🌍 Global NewsSphere</p>
+             </div>
+
+             <p>Global NewsSphere: Unveiling the World Daily. Your trusted source for diverse, accurate, and timely news, spanning continents and illuminating perspectives. Stay informed, stay connected.</p>
+
+             <ul class="icon-holder">
+                <li>
+                    <i class="fa-brands fa-facebook"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-twitter"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-telegram"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-youtube"></i>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Copyrights -->
+    <div class="copyright hide-for-animation">
+        ©️ Copyrights 2023 <a href="index.html">Global NewsSphere</a>
+    </div>
+</body>
+</html>

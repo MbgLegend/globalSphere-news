@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global NewsSphere - home</title>
+    <script src="https://kit.fontawesome.com/f921ec9255.js" crossorigin="anonymous"></script>
+    <script defer type="module" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Head -->
+    <div class="head hide-for-animation">
+        <div>
+            <ul class="content-holder">
+                <li>
+                    <a class="btn" href="HTML/contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="HTML/about.html">About</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="icon-holder">
+                <li>
+                    <i class="fa-brands fa-facebook"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-twitter"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-telegram"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-youtube"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+           <p>🌍 Global NewsSphere</p>
+        </div>
+        <!-- Links -->
+        <ul class="content-holder">
+            <li class="close-menu">
+                <i class="fa-solid fa-x" id="close"></i>
+            </li>
+            <li>
+                <a class="active" data-category="News">News</a>
+            </li>
+            <li>
+                <a data-category="Ukraine war">Ukraine war</a>
+            </li>
+            <li>
+                <a data-category="Bitcoin">Bitcoin</a>
+            </li>
+            <li>
+                <a data-category="Covid-19">Covid-19</a>
+            </li>
+            <li>
+                <a data-category="Climate crisis">Climate crisis</a>
+            </li>
+        </ul>
+        <!-- Icons -->
+        <ul class="icon-holder">
+            <li>
+                <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+            </li>
+            <li class="dropdown">
+                <i class="fa-solid fa-gear" id="settings"></i>
+                <div class="dropdown-content"> 
+                    <h1>color scheme</h1>
+                    <div class="toggle-bar">
+                        <input type="checkbox" class="toggle-checkbox" id="toggle" />
+                        <label class="toggle-label active" for="toggle"></label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <i class="fa-solid fa-bars" id="menu"></i>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Search bar   -->
+    <div class="searchbar hide-for-animation">
+        <div class="container">
+            <input type="search" placeholder="search for news" id="search">
+            <button type="submit" id="submit">Search</button>
+            <p class="errorMessage">Enter Text to search!</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header hide-for-animation">
+        <div class="banner">
+            <div>
+                <h1>Breaking Boundaries: Exploring the Latest Stories<br>Shaping Our World!</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- News -->
+    <section class="news hide-for-animation">
+        <h1>Total Results: <span class="amount-of-results"></span></h1>
+        <div class="grid">
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <div class="pagination hide-for-animation">
+    </div>
+
+    <!-- News letter -->
+    <div class="newsletter">
+        <div class="grid">
+            <h2>Sign up for our Press Releases</h2>
+            <div>
+                <input type="email" id="newsletterEmail" placeholder="Enter your email address">
+                <button type="submit" id="newsletterSubmit">Subscribe</button>
+            </div>
+        </div>
+        <p id="newsletterErrorMessage"></p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="hide-for-animation">
+        <div class="text-container">
+            <div class="logo">
+                <p>🌍 Global NewsSphere</p>
+             </div>
+
+             <p>Global NewsSphere: Unveiling the World Daily. Your trusted source for diverse, accurate, and timely news, spanning continents and illuminating perspectives. Stay informed, stay connected.</p>
+
+             <ul class="icon-holder">
+                <li>
+                    <i class="fa-brands fa-facebook"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-twitter"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-telegram"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-youtube"></i>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Copyrights -->
+    <div class="copyright hide-for-animation">
+        ©️ Copyrights 2023 <a href="index.html">Global NewsSphere</a>
+    </div>
+</body>
+</html>
